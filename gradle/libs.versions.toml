@@ -1,0 +1,36 @@
+[versions]
+kotlin = "2.2.10"
+shadow = "9.0.0"
+spring = "3.5.5"
+spring-shell = "3.4.1"
+jackson = "2.20.0"
+telegrambots = "9.1.0"
+graalvm = "0.11.0"
+
+[libraries]
+spring-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring" }
+spring-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "spring" }
+spring-websocket = { module = "org.springframework.boot:spring-boot-starter-websocket", version.ref = "spring" }
+spring-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "spring" }
+spring-security = { module = "org.springframework.boot:spring-boot-starter-security", version.ref = "spring" }
+spring-shell = { module = "org.springframework.shell:spring-shell-starter", version.ref = "spring-shell" }
+
+telegram-spring = { module = "org.telegram:telegrambots-springboot-longpolling-starter", version.ref = "telegrambots" }
+telegram-client = { module = "org.telegram:telegrambots-client", version.ref = "telegrambots" }
+
+commonmark = { module = "org.commonmark:commonmark", version = "0.26.0" }
+
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+
+jackson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+
+h2 = { module = "com.h2database:h2", version = "2.3.232" }
+postgresql = { module = "org.postgresql:postgresql", version = "42.7.7" }
+
+[plugins]
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+spring-boot = { id = "org.springframework.boot", version.ref = "spring" }
+spring-kotlin = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+spring-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
+graalvm = { id = "org.graalvm.buildtools.native", version.ref = "graalvm" }
